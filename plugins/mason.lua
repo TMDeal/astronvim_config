@@ -1,26 +1,42 @@
--- customize mason plugins
 return {
-  -- use mason-lspconfig to configure LSP installations
   {
-    "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
+    "williamboman/mason.nvim",
     opts = {
-      -- ensure_installed = { "lua_ls" },
+      path = "append",
     },
   },
-  -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "pyright",
+        "cssls",
+        "html",
+        "tsserver",
+      },
+    },
+  },
   {
     "jay-babu/mason-null-ls.nvim",
-    -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = {
+        "prettierd",
+        "stylua",
+        "black",
+
+        "flake8",
+        "djlint",
+        "eslint",
+      },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      -- ensure_installed = { "python" },
+      ensure_installed = {
+        "python",
+      },
     },
   },
 }
