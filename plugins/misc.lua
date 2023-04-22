@@ -10,11 +10,6 @@ return {
   },
 
   {
-    "windwp/nvim-ts-autotag",
-    ft = { "html", "htmldjango", "jsx", "tsx" },
-  },
-
-  {
     "sindrets/diffview.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",

@@ -12,9 +12,10 @@ return {
       "javascript",
       "dockerfile",
       "json",
+      "jsonc",
       "yaml",
       "toml",
-      "bash"
+      "bash",
     },
   },
 }
