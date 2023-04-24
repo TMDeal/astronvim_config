@@ -21,4 +21,13 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+
+  {
+    "ahmedkhalf/project.nvim",
+    opts = {
+      manual_mode = false,
+      detection_methods = { "pattern", "lsp" },
+      patterns = { ".git", "venv", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", ".projectroot" },
+    }
+  }
 }
